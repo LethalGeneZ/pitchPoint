@@ -1,0 +1,409 @@
+:root {
+  /* Main theme colors and a shared border-radius for consistent UI styling */
+  --green:#037a5a;
+  --ink:#0b0d0e;
+  --text:#111315;
+  --muted:#5f6b76;
+  --line:#e7ebef;
+  --bg:#C2E391;
+  --card:#fafcff;
+  --radius:14px;
+}
+
+/* Basic reset so browsers don't apply their own defaults that break layout */
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; }
+
+/* Remove default link underline and keep color consistent with the design */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Simple hover effect to make the interaction a bit more clear */
+a:hover {
+  text-decoration: underline;
+  color: var(--green);
+}
+
+
+/* General typography setup and page background color */
+body {
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* Container for keeping content centered and within a readable width */
+.container {
+  max-width:1100px;
+  margin:28px auto;
+  padding:0 18px;
+}
+
+/* Headings and muted text styling used throughout the pages */
+.page-title { margin:0 0 14px 0; font-weight:700; }
+.muted { color:var(--muted); }
+
+/* ======= Sticky navigation bar to keep menu visible during scroll ======= */
+.topnav {
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  padding:12px 18px;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+/* Brand section with logo and name displayed together */
+.topnav .brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  font-size:1.1rem;
+  text-decoration:none;
+  color:var(--text);
+  padding:0;
+  border-radius:0;
+}
+
+/* Rounded logo image for cleaner brand look */
+.brand-logo {
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* Slight spacing adjustment for brand text */
+.brand-name {
+  letter-spacing:0.02em;
+}
+
+/* Keeping the navigation links centered for better balance */
+.nav-links {
+  flex:1;
+  display:flex;
+  justify-content:center;
+  gap:22px;
+}
+
+/* Right-aligned links for login/logout or other actions */
+.right-links {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+/* Default appearance of navigation links */
+.topnav a {
+  color:var(--text);
+  text-decoration:none;
+  padding:6px 8px;
+  border-radius:8px;
+}
+
+/* Soft hover background for better feedback */
+.topnav a:hover { background:#f3f6f9; }
+
+/* Marking the active menu item so user knows which page they are in */
+.topnav a.active {
+  background:var(--green);
+  color:#fff;
+}
+
+/* Helper classes kept for layout flexibility */
+.topnav .spacer { flex:1; }
+.dot { color:#47525e; }
+
+/* Flash messages (success/error) shown after an action */
+.flash-wrap { padding:8px 18px; }
+.flash {
+  margin:8px auto;
+  max-width:1100px;
+  border:1px solid var(--line);
+  padding:10px 12px;
+  border-radius:10px;
+  background:var(--card);
+}
+.flash.success { border-color:#cfe8d8; }
+.flash.error { border-color:#f3c4c4; }
+
+/* General button styling for consistency across the project */
+.btn {
+  display:inline-block;
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  text-decoration:none;
+  color:var(--text);
+}
+.btn:hover { background:#f8fafc; }
+
+/* Primary action button using the theme's main green color */
+.btn-primary {
+  background:var(--green);
+  border-color:transparent;
+  color:#fff;
+}
+.btn-primary:hover { background:var(--green-2); }
+
+/* Cards layout for showing project items in a responsive grid */
+.cards {
+  list-style:none;
+  padding:0; margin:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;
+}
+.card {
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:14px;
+  border-radius:var(--radius);
+}
+.card h3 { margin:0 0 8px 0; }
+.card-summary { color:var(--muted); margin:0 0 8px; }
+.meta { display:flex; gap:10px; color:var(--muted); font-size:12px; }
+
+/* Form grid used to keep inputs aligned properly */
+.form .grid {
+  display:grid;
+  gap:12px;
+  grid-template-columns:1fr;
+}
+label { display:grid; gap:6px; }
+input,select,textarea {
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px 12px;
+  font:inherit;
+  background:#fff;
+  color:var(--text);
+}
+
+/* Allow vertical resize only to avoid layout breaking */
+textarea { resize:vertical; }
+.actions { display:flex; gap:10px; margin-top:12px; }
+
+/* Clean table design to display data clearly */
+.table {
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.table th,.table td {
+  border-bottom:1px solid var(--line);
+  padding:12px 10px;
+  text-align:left;
+}
+.table tr:last-child td { border-bottom:none; }
+
+/* Project detail page heading and file list styling */
+.project h1 { margin-bottom:4px; }
+.file-list { list-style:square; padding-left:20px; }
+
+/* Footer with gradient background to give a more polished feeling */
+footer {
+  background:linear-gradient(135deg,#1f4037,#99f2c8);
+  width:100vw;
+  height:auto;
+  padding-top:40px;
+  color:#fff;
+  /* originally considered absolute here but leaving that commented for now */
+}
+
+/* Footer aligned to center for readability and cleaner layout */
+.footer-content {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  position: relative;
+}
+.footer-content h3 {
+  font-size:1.8rem;
+  font-weight:400;
+  text-transform:capitalize;
+  line-height:3rem;
+}
+
+/* Footer logo kept small and rounded for consistency */
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-content p {
+  max-width:500px;
+  margin:10px auto;
+  line-height:28px;
+  font-size:14px;
+}
+
+/* Social media icons at the bottom for external links */
+.socials {
+  list-style:none;
+  display:flex;
+  margin:1rem 0 3rem 0;
+  position: center;
+}
+.socials li { margin:0 10px; }
+.socials a {
+  text-decoration:none;
+  color:#fff;
+}
+.socials a i {
+  font-size:1.1rem;
+  transition:color .4s ease;
+}
+.socials a:hover i { color:peachpuff; }
+
+/* Bottom strip of the footer for copyright */
+.footer-bottom {
+  background:#000;
+  width:100vw;
+  padding:20px 0;
+  text-align:center;
+}
+.footer-bottom p {
+  font-size:14px;
+  word-spacing:2px;
+  text-transform:capitalize;
+  margin:0;
+}
+.footer-bottom span {
+  text-transform:uppercase;
+  opacity:.4;
+  font-weight:200;
+}
+
+/* Profile page layout with left info card and right edit form */
+.profile-layout {
+  max-width:1100px;
+  margin:0 auto 40px;
+  display:flex;
+  gap:32px;
+  align-items:flex-start;
+}
+
+/* Left user profile summary card */
+.profile-card {
+  flex:0 0 320px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+
+/* Right side form used for updating user details */
+.profile-edit {
+  flex:1;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+
+/* Profile picture preview area */
+.profile-avatar {
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+/* Either the photo or a placeholder circle if no image uploaded */
+.profile-avatar img,
+.avatar-placeholder {
+  width:120px !important;
+  height:120px !important;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  background:#e3edf3;
+}
+.avatar-placeholder {
+  display:flex;
+  align-items:left;
+  justify-content:center;
+  font-size:40px;
+  font-weight:600;
+  color:#47525e;
+}
+
+/* Form becomes two columns on wider screens for better spacing */
+@media (min-width:800px) {
+  .form .grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* Large round button for adding new projects */
+.add-project-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: var(--green);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* Slight scale on hover to make it feel more interactive */
+.add-project-btn:hover {
+  background: #02634a;
+  transform: scale(1.08);
+}
+
+.add-project-btn i {
+  pointer-events: none;
+}
+
+/* === Responsive navigation adjustments for smaller screens === */
+@media (max-width: 980px) {
+  .topnav {
+    flex-wrap: wrap; /* allow items to move to next line when needed */
+    row-gap: 8px;
+  }
+
+  /* Brand centered on its own row */
+  .topnav .brand {
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  /* Navigation links wrapped and centered on mobile */
+  .nav-links {
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  /* Right-aligned section also centered on mobile layout */
+  .right-links {
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  /* Slightly smaller font to fit better on narrow screens */
+  .topnav a {
+    font-size: 0.9rem;
+  }
+}

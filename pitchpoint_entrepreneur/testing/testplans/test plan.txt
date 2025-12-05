@@ -1,0 +1,131 @@
+TEST PLAN.
+ 
+PITCHPOINT ENTREPRENEUR MODULE – TEST PLAN
+ 
+1. TEST OBJECTIVES
+The objective of this test plan is to verify that the Entrepreneur component of
+the PitchPoint system works correctly, is reasonably robust against invalid
+input, and respects the specified functional and security requirements.
+ 
+The specific goals are:
+ 
+- To validate the CRUD behavior for Entrepreneur projects:
+  - Create project
+  - Read/view project
+  - Update project
+  - Delete project and project files
+ 
+- To verify core account-related functionality for entrepreneurs:
+  - Signup
+  - Profile update
+  - Login form validation (email and password rules – tested in previous boundary tests)
+ 
+- To confirm that key public pages and project pages exist and load the expected
+  elements (forms, links, buttons, titles).
+ 
+- To validate helper functions used across the module (URLs, HTML escaping,
+  CSRF token generation and validation).
+ 
+Both manual (form-level, boundary and validation tests) and automated unit tests
+(using PHPUnit) are included in this plan.
+ 
+ 
+2. SCOPE
+ 
+In scope (Entrepreneur module only):
+ 
+- Actions (backend scripts) in:
+  - pitchpoint_entrepreneur/actions/
+    - create_project.php
+    - update_project.php
+    - delete_project.php
+    - deleteProjectFile.php
+    - signup.php
+    - update_profile.php
+ 
+- Public pages in:
+  - pitchpoint_entrepreneur/public/
+    - index.php (dashboard for entrepreneur)
+    - profile.php
+    - project.php
+    - edit-project.php
+ 
+- Shared helpers:
+  - pitchpoint_entrepreneur/includes/functions.php
+  - Entrepreneur actions folder existence (structural check)
+ 
+Out of scope:
+ 
+- Investor module
+- Admin module
+ 
+ 
+3. TEST TYPES AND STRATEGY
+ 
+I used the following test types :
+ 
+1) Manual Functional & Boundary Testing (Black-box)
+   - Performed these tests via browser against the running XAMPP environment.
+   - Focus on form validation and boundary values:
+     - Create project form (title, budget)
+     - Login and Signup forms (email format, required fields, password length)
+   - Technique: Equivalence partitioning and boundary value analysis
+     (min, min–1, min+1, etc).
+ 
+2) Automated Unit Testing with PHPUnit
+   - Static file-level and logic checks using PHPUnit 10.
+   - Verifies:
+     - File existence for actions and public pages.
+     - Presence of security checks (POST-only, CSRF, require_login).
+     - Presence of SQL INSERT / UPDATE / DELETE queries.
+     - Presence of key form fields and UI elements.
+     - Behaviour of helper functions in includes/functions.php.
+ 
+3) Static Structural Testing
+   - Ensures required directories (e.g., /actions) exist and that the module
+     structure is correct.
+ 
+ 
+4. TEST ENVIRONMENT
+ 
+- Local development environment:
+  - macOS with XAMPP
+  - PHP 8.4.x
+  - MySQL (local) with "pitchpoint" database
+  - Web server root: /Applications/XAMPP/xamppfiles/htdocs/pitchPoint/
+ 
+- Tools:
+  - PHPUnit 10 (installed via Composer)
+  - Browser (Chrome) for manual tests
+  - VS Code for code editing
+ 
+ 
+5. MANUAL FUNCTIONAL & BOUNDARY TESTS (FORM-LEVEL)
+ 
+ 
+ 
+ 
+ 
+6. AUTOMATED UNIT TESTS – ACTIONS
+ 
+7. AUTOMATED UNIT TESTS – PUBLIC & PROJECT PAGES
+ 
+ 
+8. AUTOMATED UNIT TESTS – FUNCTIONS & STRUCTURE
+
+
+ 
+09. evidences
+
+ 
+- Manual test logs and boundary tests:
+ 
+ 
+- PHPUnit test files:
+  
+ 
+- PHPUnit execution screenshots:
+  
+ 
+- SQL SELECT * FROM table views:
+ 

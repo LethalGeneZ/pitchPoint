@@ -1,0 +1,33 @@
+{
+  "times": {
+    "UpdateProfileActionTest::testUpdateProfileFileExists": 0.003,
+    "UpdateProjectActionTest::testFileExists": 0.001,
+    "UpdateProjectActionTest::testSecurityChecksExist": 0.001,
+    "UpdateProjectActionTest::testInputValidationExists": 0,
+    "UpdateProjectActionTest::testSQLUpdateQueriesExist": 0,
+    "UpdateProjectActionTest::testUploadLogicExists": 0,
+    "SignupActionTest::testFileExists": 0.001,
+    "SignupActionTest::testSecurityChecksExist": 0,
+    "SignupActionTest::testValidationLogicExists": 0,
+    "SignupActionTest::testDatabaseInsertQueriesExist": 0,
+    "SignupActionTest::testLoginAndRedirectOnSuccessExist": 0,
+    "PublicPagesTest::testDashboardPageExists": 0.009,
+    "PublicPagesTest::testProfilePageExists": 0,
+    "PublicPagesTest::testDashboardLinksToMyProjects": 0.001,
+    "PublicPagesTest::testProfilePageHasNameAndEmailInputs": 0,
+    "PublicPagesTest::testIndexPageExists": 0.001,
+    "PublicPagesTest::testIndexPageHasProjectsSectionOrLink": 0.001,
+    "ProjectPagesTest::testProjectPageExists": 0.003,
+    "ProjectPagesTest::testEditProjectPageExists": 0,
+    "ProjectPagesTest::testProjectPageContainsTitlePlaceholder": 0.001,
+    "ProjectPagesTest::testEditProjectPageContainsUpdateForm": 0,
+    "ProjectPagesTest::testProjectPageHasBackToDashboardLink": 0.005,
+    "ProjectPagesTest::testProjectPageHasOwnerActionLinks": 0,
+    "FunctionsTest::base_url_returns_string": 0.004,
+    "FunctionsTest::h_escapes_html_characters": 0,
+    "FunctionsTest::csrf_token_returns_non_empty_string": 0.001,
+    "FunctionsTest::csrf_validate_returns_true_for_valid_token": 0,
+    "FunctionsTest::csrf_validate_returns_false_for_invalid_token": 0,
+    "FunctionsTest::flash_set_and_get_work_correctly": 0.005
+  }
+}

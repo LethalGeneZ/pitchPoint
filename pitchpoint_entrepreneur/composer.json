@@ -1,0 +1,6 @@
+{
+    "name": "zahidhasanjoy/agile",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}
