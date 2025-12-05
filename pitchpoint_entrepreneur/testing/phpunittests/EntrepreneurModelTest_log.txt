@@ -1,0 +1,13 @@
+PHPUnit 10.5.59 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.4.15
+Configuration: /Applications/XAMPP/xamppfiles/htdocs/pitchPoint 09-32-52-423/pitchpoint_entrepreneur/phpunit.xml
+
+.                                                                   1 / 1 (100%)
+
+Time: 00:00.001, Memory: 8.00 MB
+
+Entrepreneur Model
+ ✔ Actions folder exists
+
+OK (1 test, 1 assertion)

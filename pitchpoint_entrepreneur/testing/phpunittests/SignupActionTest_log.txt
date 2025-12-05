@@ -1,0 +1,17 @@
+PHPUnit 10.5.59 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.4.15
+Configuration: /Applications/XAMPP/xamppfiles/htdocs/pitchPoint 09-32-52-423/pitchpoint_entrepreneur/phpunit.xml
+
+.....                                                               5 / 5 (100%)
+
+Time: 00:00.002, Memory: 8.00 MB
+
+Signup Action
+ ✔ File exists
+ ✔ Security checks exist
+ ✔ Validation logic exists
+ ✔ Database insert queries exist
+ ✔ Login and redirect on success exist
+
+OK (5 tests, 12 assertions)

@@ -1,0 +1,16 @@
+PHPUnit 10.5.59 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.4.15
+Configuration: /Applications/XAMPP/xamppfiles/htdocs/pitchPoint 09-32-52-423/pitchpoint_entrepreneur/phpunit.xml
+
+....                                                                4 / 4 (100%)
+
+Time: 00:00.002, Memory: 8.00 MB
+
+Public Pages
+ ✔ Index page exists
+ ✔ Profile page exists
+ ✔ Index page has projects section or link
+ ✔ Profile page has name and email inputs
+
+OK (4 tests, 9 assertions)

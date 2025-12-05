@@ -1,0 +1,14 @@
+PHPUnit 10.5.59 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.4.15
+Configuration: /Applications/XAMPP/xamppfiles/htdocs/pitchPoint 09-32-52-423/pitchpoint_entrepreneur/phpunit.xml
+
+..                                                                  2 / 2 (100%)
+
+Time: 00:00.001, Memory: 8.00 MB
+
+Delete Project Action
+ ✔ Delete project action file exists
+ ✔ Delete project file contains sql delete
+
+OK (2 tests, 3 assertions)
